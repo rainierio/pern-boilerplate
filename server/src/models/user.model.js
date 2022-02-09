@@ -1,4 +1,4 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes, fn } = require('sequelize');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
 const db = require('../config/db');
@@ -41,6 +41,13 @@ const userSchema = db.define(
     },
   },
   {
+    hooks: {
+      beforeSave: async (user, option) => {
+        if (user.changed('password')) {
+          user.password = await bcrypt.hash(user.password, 8);
+        }
+      }
+    },
     freezeTableName: true,
     timestamps: true,
   }
@@ -52,7 +59,8 @@ const userSchema = db.define(
  * @param {ObjectId} [excludeUserId] - The id of the user to be excluded
  * @returns {Promise<boolean>}
  */
-userSchema.statics.isEmailTaken = async function (email, excludeUserId) {
+
+userSchema.isEmailTaken = async function (email, excludeUserId) {
   const user = await this.findByPk({ email, _id: { $ne: excludeUserId } });
   return !!user;
 };
@@ -62,17 +70,10 @@ userSchema.statics.isEmailTaken = async function (email, excludeUserId) {
  * @param {string} password
  * @returns {Promise<boolean>}
  */
-userSchema.methods.isPasswordMatch = async function (password) {
+
+userSchema.isPasswordMatch = async function (password) {
   const user = this;
   return bcrypt.compare(password, user.password);
 };
-
-userSchema.pre('save', async function (next) {
-  const user = this;
-  if (user.isModified('password')) {
-    user.password = await bcrypt.hash(user.password, 8);
-  }
-  next();
-});
 
 module.exports = userSchema;

@@ -8,8 +8,8 @@ const compression = require('compression');
 const config = require('./config/config');
 const morgan = require('./config/morgan');
 const { jwtStrategy } = require('./config/passport');
+const routes = require('./routes/v1');
 // const { authLimiter } = require('./middlewares/rateLimiter');
-// const routes = require('./routes/v1');
 // const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
 
@@ -49,7 +49,7 @@ passport.use('jwt', jwtStrategy);
 //   }
 
 // v1 api routes
-//   app.use('/v1', routes);
+  app.use('/v1', routes);
 
 // send back a 404 error for any unknown api request
 app.use((req, res, next) => {

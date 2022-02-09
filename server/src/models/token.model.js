@@ -37,6 +37,6 @@ const tokenSchema = db.define(
 );
 
 // add plugin that converts mongoose to json
-tokenSchema.plugin(toJSON);
+// tokenSchema.plugin(toJSON);
 
 module.exports = tokenSchema;
