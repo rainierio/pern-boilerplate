@@ -1,13 +1,17 @@
+const sequelize = require('./config/db');
 const app = require('./app');
 const config = require('./config/config');
 const logger = require('./config/logger');
 
 let server;
 
-// find replacement for Postgre
-// mongoose.connect(config.mongoose.url, config.mongoose.options).then(() => {
-//   logger.info('Connected to MongoDB');
-// });
+sequelize.authenticate()
+    .then(() => {
+        console.log('Connection has been established successfully.');
+    })
+    .catch(err => {
+        console.error('Unable to connect to the database:', err);
+    });
 
 server = app.listen(config.port, () => {
     logger.info(`Listening to port ${config.port}`)

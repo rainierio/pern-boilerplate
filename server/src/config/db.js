@@ -1,8 +1,9 @@
 const Sequelize = require('sequelize');
+require('dotenv').config();
 
-const db = new Sequelize(process.POSTGRE_DATABASE, process.POSTGRE_USER, process.POSTGRE_PASSWORD, {
-    host: process.POSTGRE_HOST,
-    dialect: 'postgres'
-  });
+const db = new Sequelize(process.env.POSTGRE_DATABASE, process.env.POSTGRE_USER, process.env.POSTGRE_PASSWORD, {
+  host: 'localhost',
+  dialect: 'postgres'
+});
 
 module.exports = db;
