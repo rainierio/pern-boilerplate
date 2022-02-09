@@ -4,9 +4,9 @@ const xss = require('xss-clean');
 const cors = require('cors');
 const passport = require('passport');
 const httpStatus = require('http-status');
+const compression = require('compression');
 const config = require('./config/config');
 const morgan = require('./config/morgan');
-const compression = require('compression');
 const { jwtStrategy } = require('./config/passport');
 // const { authLimiter } = require('./middlewares/rateLimiter');
 // const routes = require('./routes/v1');
@@ -57,11 +57,9 @@ app.use((req, res, next) => {
 });
 
 // convert error to ApiError, if needed
-//app.use(errorConverter);
+// app.use(errorConverter);
 
 // handle error
-//app.use(errorHandler);
+// app.use(errorHandler);
 
 module.exports = app;
-
-

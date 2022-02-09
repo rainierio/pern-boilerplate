@@ -10,8 +10,3 @@
     - cors : node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options
     - passport : Passport is Express-compatible authentication middleware for Node.js.
     - httpStatus :  Utility to interact with HTTP status codes
-
-
-
-# Next Task
-    - Install and apply sequelize ORM
