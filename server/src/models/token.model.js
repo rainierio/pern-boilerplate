@@ -8,17 +8,14 @@ const tokenSchema = db.define(
   {
     token: {
       type: DataTypes.STRING,
-      required: true,
-      index: true,
+      allowNull: false,
     },
     user: {
       type: DataTypes.STRING, // bef: mongoose.SchemaTypes.ObjectId,
-      ref: 'User',
       allowNull: false,
     },
     type: {
-      type: DataTypes.STRING,
-      enum: [tokenTypes.REFRESH, tokenTypes.RESET_PASSWORD, tokenTypes.VERIFY_EMAIL],
+      type: DataTypes.ENUM(tokenTypes.REFRESH, tokenTypes.RESET_PASSWORD, tokenTypes.VERIFY_EMAIL),
       allowNull: false,
     },
     expires: {
@@ -26,8 +23,8 @@ const tokenSchema = db.define(
       allowNull: false,
     },
     blacklisted: {
-      type: Boolean,
-      default: false,
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
   },
   {
@@ -38,5 +35,4 @@ const tokenSchema = db.define(
 
 // add plugin that converts mongoose to json
 // tokenSchema.plugin(toJSON);
-
 module.exports = tokenSchema;

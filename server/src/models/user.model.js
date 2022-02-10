@@ -60,8 +60,8 @@ const userSchema = db.define(
  * @returns {Promise<boolean>}
  */
 
-userSchema.isEmailTaken = async function (email, excludeUserId) {
-  const user = await this.findByPk({ email, _id: { $ne: excludeUserId } });
+userSchema.isEmailTaken = async function (email) {
+  const user = await this.findOne().where('email', email);
   return !!user;
 };
 
