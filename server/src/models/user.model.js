@@ -61,7 +61,7 @@ const userSchema = db.define(
  */
 
 userSchema.isEmailTaken = async function (email) {
-  const user = await this.findOne().where('email', email);
+  const user = await this.findOne({ where: { email: email } });
   return !!user;
 };
 
