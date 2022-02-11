@@ -1,5 +1,6 @@
 const httpStatus = require('http-status');
 const { User } = require('../models');
+const bcrypt = require('bcryptjs');
 const ApiError = require('../utils/ApiError');
 
 /**
@@ -43,7 +44,7 @@ const getUserById = async (id) => {
  * @returns {Promise<User>}
  */
 const getUserByEmail = async (email) => {
-  return User.findOne({where: {email: email} });
+  return User.findOne({ where: { email: email } });
 };
 
 /**
@@ -79,6 +80,16 @@ const deleteUserById = async (userId) => {
   return user;
 };
 
+/**
+ * Check user password
+ * @param {string} password
+ * @returns {Promise <boolean>}
+ */
+const isPasswordMatch = async function (password) {
+  console.log(password);
+  return await bcrypt.compare(password, User.password)
+}
+
 module.exports = {
   createUser,
   queryUsers,
@@ -86,4 +97,5 @@ module.exports = {
   getUserByEmail,
   updateUserById,
   deleteUserById,
+  isPasswordMatch
 };

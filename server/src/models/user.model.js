@@ -72,6 +72,7 @@ userSchema.isEmailTaken = async function (email) {
  */
 
 userSchema.isPasswordMatch = async function (password) {
+  console.log(password);
   const user = this;
   return bcrypt.compare(password, user.password);
 };
