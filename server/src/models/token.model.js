@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const db = require('../config/db');
-const { toJSON } = require('./plugins');
+// const { toJSON } = require('./plugins');
 const { tokenTypes } = require('../config/tokens');
 
 const tokenSchema = db.define(
@@ -15,7 +15,7 @@ const tokenSchema = db.define(
       allowNull: false,
     },
     type: {
-      type: DataTypes.ENUM(tokenTypes.REFRESH, tokenTypes.RESET_PASSWORD, tokenTypes.VERIFY_EMAIL),
+      type: DataTypes.ENUM(tokenTypes.RESET_PASSWORD, tokenTypes.REFRESH, tokenTypes.VERIFY_EMAIL),
       allowNull: false,
     },
     expires: {
