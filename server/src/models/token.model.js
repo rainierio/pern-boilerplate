@@ -11,7 +11,7 @@ const tokenSchema = db.define(
       allowNull: false,
     },
     user: {
-      type: DataTypes.STRING, // bef: mongoose.SchemaTypes.ObjectId,
+      type: DataTypes.INTEGER, // bef: mongoose.SchemaTypes.ObjectId,
       allowNull: false,
     },
     type: {
@@ -33,6 +33,4 @@ const tokenSchema = db.define(
   }
 );
 
-// add plugin that converts mongoose to json
-// tokenSchema.plugin(toJSON);
 module.exports = tokenSchema;

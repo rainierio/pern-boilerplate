@@ -8,7 +8,7 @@ sequelize
   .then(() => {
     logger.info('Connection has been established successfully.');
     // sync database table with app models
-    // sequelize.sync({force:true});
+    //sequelize.sync({force:true});
   })
   .catch((err) => {
     logger.error('Unable to connect to the database:', err);
