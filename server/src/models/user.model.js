@@ -29,6 +29,16 @@ const userSchema = db.define(
     password: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: [8, 100],
+        checkValue(value) {
+          if (!value.match(/\d/) || !value.match(/[a-zA-Z]/)) {
+            throw new Error('Password must contain at least one letter and one number');
+          }
+        }
+      },
+      //trim: true, this is mongoose, find syntax in sequelize
+
     },
     role: {
       type: DataTypes.STRING,
@@ -44,7 +54,7 @@ const userSchema = db.define(
     hooks: {
       beforeSave: async (user) => {
         if (user.changed('password')) {
-          this.password = await bcrypt.hash(user.password, 8);
+          user.password = await bcrypt.hash(user.password, 8);
         }
       },
     },
@@ -64,5 +74,6 @@ userSchema.isEmailTaken = async function (email) {
   const user = await this.findOne({ where: { email } });
   return !!user;
 };
+
 
 module.exports = userSchema;
