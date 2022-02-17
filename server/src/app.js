@@ -43,10 +43,10 @@ app.options('*', cors());
 app.use(passport.initialize());
 passport.use('jwt', jwtStrategy);
 
-// limit repeated failed requests to auth endpoints
+// limit repeated failed requests to auth endpoints find outh this function
 // if (config.env === 'production') {
 //     app.use('/v1/auth', authLimiter);
-//   }
+//   } 
 
 // v1 api routes
 app.use('/v1', routes);
