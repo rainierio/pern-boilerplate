@@ -1,3 +1,4 @@
+// get more info about this function
 class ApiError extends Error {
   constructor(statusCode, message, isOperational = true, stack = '') {
     super(message);
