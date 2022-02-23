@@ -28,7 +28,7 @@ const tokenSchema = db.define(
   },
   {
     freezeTableName: true,
-    timestamps: true,
+    timestamps: true
   }
 );
 
