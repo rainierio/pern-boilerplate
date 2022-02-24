@@ -10,7 +10,7 @@ const tokenSchema = db.define(
       allowNull: false,
     },
     user: {
-      type: DataTypes.INTEGER, // bef: mongoose.SchemaTypes.ObjectId
+      type: DataTypes.INTEGER, // bef: mongoose.SchemaTypes.ObjectId 
       allowNull: false,
     },
     type: {
