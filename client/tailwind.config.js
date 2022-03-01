@@ -3,5 +3,11 @@ module.exports = {
   theme: {
     extend: {},
   },
+  
+  // daisyUI config (optional)
+  daisyui: {
+    themes: ["light",],
+  },
+
   plugins: [require("daisyui")],
 }
