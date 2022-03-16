@@ -1,15 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import SignIn from "./views/Signin/SignIn";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-      </header>
+      <Routes>
+        <Route path="signin" element={<SignIn />} />
+      </Routes>
     </div>
   );
 }
