@@ -71,7 +71,7 @@ function SignUp() {
           p="40px"
           mx={{ base: '100px' }}
           bg={bgColor}
-          boxShadow="0 20px 27px 0 rgb(0 0 0 / 5%)"
+          boxShadow="0 20px 27px 0 rgb(0 0 0 / 10%)"
         >
           <Text fontSize="xl" color={textColor} fontWeight="bold" textAlign="center" mb="22px">
             Register With
