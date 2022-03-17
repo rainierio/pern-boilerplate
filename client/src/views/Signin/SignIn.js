@@ -8,13 +8,12 @@ import {
   FormLabel,
   Heading,
   Input,
-  Link,
   Switch,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
 // Assets
-import signInImage from 'assets/img/signInImage.png'; // eslint-disable-line
+import signInImage from 'assets/img/signInImage.png';
 
 function SignIn() {
   // Chakra color mode
@@ -81,9 +80,9 @@ function SignIn() {
             <Flex flexDirection="column" justifyContent="center" alignItems="center" maxW="100%" mt="0px">
               <Text color={textColor} fontWeight="medium">
                 Don't have an account?
-                <Link color={titleColor} as="span" ms="5px" fontWeight="bold">
+                <Text color={titleColor} as="span" ms="5px" fontWeight="bold" href="#">
                   Sign Up
-                </Link>
+                </Text>
               </Text>
             </Flex>
           </Flex>
