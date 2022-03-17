@@ -1,13 +1,15 @@
 // chakra imports
-import { Avatar, Flex, Text, useColorModeValue } from "@chakra-ui/react";
-import { ClockIcon } from "components/Icons/Icons";
-import PropTypes from "prop-types";
-import React from "react";
+import {
+  Avatar, Flex, Text, useColorModeValue,
+} from '@chakra-ui/react';
+import { ClockIcon } from 'components/Icons/Icons';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 export function ItemContent(props) {
-  const navbarIcon = useColorModeValue("gray.500", "gray.200");
-  const notificationColor = useColorModeValue("gray.700", "white");
-  const spacing = " ";
+  const navbarIcon = useColorModeValue('gray.500', 'gray.200');
+  const notificationColor = useColorModeValue('gray.700', 'white');
+  const spacing = ' ';
   return (
     <>
       <Avatar

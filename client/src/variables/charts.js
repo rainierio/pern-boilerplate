@@ -1,6 +1,6 @@
 export const barChartData = [
   {
-    name: "Sales",
+    name: 'Sales',
     data: [330, 250, 110, 300, 490, 350, 270, 130, 425],
   },
 ];
@@ -13,27 +13,27 @@ export const barChartOptions = {
   },
   tooltip: {
     style: {
-      backgroundColor: "red",
-      fontSize: "12px",
+      backgroundColor: 'red',
+      fontSize: '12px',
       fontFamily: undefined,
     },
     onDatasetHover: {
       style: {
-        backgroundColor: "red",
-        fontSize: "12px",
+        backgroundColor: 'red',
+        fontSize: '12px',
         fontFamily: undefined,
       },
     },
-    theme: "dark",
+    theme: 'dark',
   },
   xaxis: {
-    categories: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    categories: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     show: false,
     labels: {
       show: false,
       style: {
-        colors: "#fff",
-        fontSize: "12px",
+        colors: '#fff',
+        fontSize: '12px',
       },
     },
     axisBorder: {
@@ -45,12 +45,12 @@ export const barChartOptions = {
   },
   yaxis: {
     show: true,
-    color: "#fff",
+    color: '#fff',
     labels: {
       show: true,
       style: {
-        colors: "#fff",
-        fontSize: "14px",
+        colors: '#fff',
+        fontSize: '14px',
       },
     },
   },
@@ -58,7 +58,7 @@ export const barChartOptions = {
     show: false,
   },
   fill: {
-    colors: "#fff",
+    colors: '#fff',
   },
   dataLabels: {
     enabled: false,
@@ -66,7 +66,7 @@ export const barChartOptions = {
   plotOptions: {
     bar: {
       borderRadius: 8,
-      columnWidth: "12px",
+      columnWidth: '12px',
     },
   },
   responsive: [
@@ -85,11 +85,11 @@ export const barChartOptions = {
 
 export const lineChartData = [
   {
-    name: "Mobile apps",
+    name: 'Mobile apps',
     data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
   },
   {
-    name: "Websites",
+    name: 'Websites',
     data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
   },
 ];
@@ -101,42 +101,42 @@ export const lineChartOptions = {
     },
   },
   tooltip: {
-    theme: "dark",
+    theme: 'dark',
   },
   dataLabels: {
     enabled: false,
   },
   stroke: {
-    curve: "smooth",
+    curve: 'smooth',
   },
   xaxis: {
-    type: "datetime",
+    type: 'datetime',
     categories: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
     ],
     labels: {
       style: {
-        colors: "#c8cfca",
-        fontSize: "12px",
+        colors: '#c8cfca',
+        fontSize: '12px',
       },
     },
   },
   yaxis: {
     labels: {
       style: {
-        colors: "#c8cfca",
-        fontSize: "12px",
+        colors: '#c8cfca',
+        fontSize: '12px',
       },
     },
   },
@@ -147,10 +147,10 @@ export const lineChartOptions = {
     strokeDashArray: 5,
   },
   fill: {
-    type: "gradient",
+    type: 'gradient',
     gradient: {
-      shade: "light",
-      type: "vertical",
+      shade: 'light',
+      type: 'vertical',
       shadeIntensity: 0.5,
       gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
       inverseColors: true,
@@ -158,7 +158,7 @@ export const lineChartOptions = {
       opacityTo: 0,
       stops: [],
     },
-    colors: ["#4FD1C5", "#2D3748"],
+    colors: ['#4FD1C5', '#2D3748'],
   },
-  colors: ["#4FD1C5", "#2D3748"],
+  colors: ['#4FD1C5', '#2D3748'],
 };

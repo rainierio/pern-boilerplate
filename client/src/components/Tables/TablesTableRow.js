@@ -7,18 +7,20 @@ import {
   Text,
   Tr,
   useColorModeValue,
-} from "@chakra-ui/react";
-import React from "react";
+} from '@chakra-ui/react';
+import React from 'react';
 
 function TablesTableRow(props) {
-  const { logo, name, email, subdomain, domain, status, date } = props;
-  const textColor = useColorModeValue("gray.700", "white");
-  const bgStatus = useColorModeValue("gray.400", "#1a202c");
-  const colorStatus = useColorModeValue("white", "gray.400");
+  const {
+    logo, name, email, subdomain, domain, status, date,
+  } = props;
+  const textColor = useColorModeValue('gray.700', 'white');
+  const bgStatus = useColorModeValue('gray.400', '#1a202c');
+  const colorStatus = useColorModeValue('white', 'gray.400');
 
   return (
     <Tr>
-      <Td minWidth={{ sm: "250px" }} pl="0px">
+      <Td minWidth={{ sm: '250px' }} pl="0px">
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <Avatar src={logo} w="50px" borderRadius="12px" me="18px" />
           <Flex direction="column">
@@ -49,8 +51,8 @@ function TablesTableRow(props) {
       </Td>
       <Td>
         <Badge
-          bg={status === "Online" ? "green.400" : bgStatus}
-          color={status === "Online" ? "white" : colorStatus}
+          bg={status === 'Online' ? 'green.400' : bgStatus}
+          color={status === 'Online' ? 'white' : colorStatus}
           fontSize="16px"
           p="3px 10px"
           borderRadius="8px"

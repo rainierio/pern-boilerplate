@@ -19,13 +19,15 @@
     ],
     "rules": {
         "no-console": "error",
-        "func-names": "off",
-        "no-underscore-dangle": "off",
-        "consistent-return": "off",
-        "jest/expect-expect": "off",
-        "security/detect-object-injection": "off",
+        "func-names": 0,
+        "no-underscore-dangle": 0,
+        "consistent-return": 0,
+        "jest/expect-expect": 0,
+        "security/detect-object-injection": 0,
         "linebreak-style": 0,
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/no-unescaped-entities": 0,
+        "import/no-unresolved": 0
     }
 
 }

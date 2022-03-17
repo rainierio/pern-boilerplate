@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Card from "components/Card/Card";
-import Chart from "react-apexcharts";
-import { barChartData, barChartOptions } from "variables/charts";
+import React, { Component } from 'react';
+import Card from 'components/Card/Card';
+import Chart from 'react-apexcharts';
+import { barChartData, barChartOptions } from 'variables/charts';
 
 class BarChart extends Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class BarChart extends Component {
     return (
       <Card
         py="1rem"
-        height={{ sm: "200px" }}
+        height={{ sm: '200px' }}
         width="100%"
         bg="linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%)"
         position="relative"

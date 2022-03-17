@@ -8,17 +8,19 @@ import {
   Text,
   Tr,
   useColorModeValue,
-} from "@chakra-ui/react";
-import React from "react";
+} from '@chakra-ui/react';
+import React from 'react';
 
 function DashboardTableRow(props) {
-  const { logo, name, members, budget, progression } = props;
-  const textColor = useColorModeValue("gray.700", "white");
+  const {
+    logo, name, members, budget, progression,
+  } = props;
+  const textColor = useColorModeValue('gray.700', 'white');
   return (
     <Tr>
-      <Td minWidth={{ sm: "250px" }} pl="0px">
+      <Td minWidth={{ sm: '250px' }} pl="0px">
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Icon as={logo} h={"24px"} w={"24px"} pe="5px" />
+          <Icon as={logo} h="24px" w="24px" pe="5px" />
           <Text
             fontSize="md"
             color={textColor}
@@ -32,16 +34,14 @@ function DashboardTableRow(props) {
 
       <Td>
         <AvatarGroup size="sm">
-          {members.map((member) => {
-            return (
-              <Avatar
-                name="Ryan Florence"
-                key={member}
-                src={member}
-                _hover={{ zIndex: "3", cursor: "pointer" }}
-              />
-            );
-          })}
+          {members.map((member) => (
+            <Avatar
+              name="Ryan Florence"
+              key={member}
+              src={member}
+              _hover={{ zIndex: '3', cursor: 'pointer' }}
+            />
+          ))}
         </AvatarGroup>
       </Td>
       <Td>
@@ -56,9 +56,11 @@ function DashboardTableRow(props) {
             color="teal.300"
             fontWeight="bold"
             pb=".2rem"
-          >{`${progression}%`}</Text>
+          >
+            {`${progression}%`}
+          </Text>
           <Progress
-            colorScheme={progression === 100 ? "teal" : "cyan"}
+            colorScheme={progression === 100 ? 'teal' : 'cyan'}
             size="xs"
             value={progression}
             borderRadius="15px"
