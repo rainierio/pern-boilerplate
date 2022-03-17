@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { mode } from '@chakra-ui/theme-tools';
 
 export const globalStyles = {
