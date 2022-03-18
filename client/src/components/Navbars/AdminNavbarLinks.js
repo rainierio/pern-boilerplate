@@ -13,7 +13,7 @@ import {
   MenuItem,
   MenuList,
   Text,
-  useColorModeValue,
+  useColorModeValue
 } from '@chakra-ui/react';
 // Assets
 import avatar1 from 'assets/img/avatars/avatar1.png';
@@ -30,9 +30,7 @@ import { NavLink } from 'react-router-dom';
 import routes from 'routes.js';
 
 export default function HeaderLinks(props) {
-  const {
-    variant, children, fixed, secondary, onOpen, ...rest
-  } = props;
+  const { variant, children, fixed, secondary, onOpen, ...rest } = props;
 
   // Chakra Color Mode
   const mainTeal = useColorModeValue('teal.300', 'teal.300');
@@ -51,26 +49,24 @@ export default function HeaderLinks(props) {
       pe={{ sm: '0px', md: '16px' }}
       w={{ sm: '100%', md: 'auto' }}
       alignItems="center"
-      flexDirection="row"
-    >
+      flexDirection="row">
       <InputGroup
         cursor="pointer"
         bg={inputBg}
         borderRadius="15px"
         w={{
           sm: '128px',
-          md: '200px',
+          md: '200px'
         }}
         me={{ sm: 'auto', md: '20px' }}
         _focus={{
-          borderColor: { mainTeal },
+          borderColor: { mainTeal }
         }}
         _active={{
-          borderColor: { mainTeal },
-        }}
-      >
+          borderColor: { mainTeal }
+        }}>
         <InputLeftElement
-          children={(
+          children={
             <IconButton
               bg="inherit"
               borderRadius="inherit"
@@ -78,14 +74,14 @@ export default function HeaderLinks(props) {
               _active={{
                 bg: 'inherit',
                 transform: 'none',
-                borderColor: 'transparent',
+                borderColor: 'transparent'
               }}
               _focus={{
-                boxShadow: 'none',
+                boxShadow: 'none'
               }}
               icon={<SearchIcon color={searchIcon} w="15px" h="15px" />}
             />
-          )}
+          }
         />
         <Input
           fontSize="xs"
@@ -115,8 +111,7 @@ export default function HeaderLinks(props) {
             ) : (
               ''
             )
-          }
-        >
+          }>
           <Text display={{ sm: 'none', md: 'flex' }}>Sign In</Text>
         </Button>
       </NavLink>
@@ -181,5 +176,5 @@ HeaderLinks.propTypes = {
   variant: PropTypes.string,
   fixed: PropTypes.bool,
   secondary: PropTypes.bool,
-  onOpen: PropTypes.func,
+  onOpen: PropTypes.func
 };

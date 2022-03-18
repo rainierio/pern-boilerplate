@@ -36,9 +36,7 @@ export default function Dashboard(props) {
         if (categoryActiveRoute !== activeRoute) {
           return categoryActiveRoute;
         }
-      } else if (
-        window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1
-      ) {
+      } else if (window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1) {
         return routes[i].name;
       }
     }
@@ -53,9 +51,7 @@ export default function Dashboard(props) {
         if (categoryActiveNavbar !== activeNavbar) {
           return categoryActiveNavbar;
         }
-      } else if (
-        window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1
-      ) {
+      } else if (window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1) {
         if (routes[i].secondaryNavbar) {
           return routes[i].secondaryNavbar;
         }
@@ -63,24 +59,19 @@ export default function Dashboard(props) {
     }
     return activeNavbar;
   };
-  const getRoutes = (routes) => routes.map((prop, key) => {
-    if (prop.collapse) {
-      return getRoutes(prop.views);
-    }
-    if (prop.category === 'account') {
-      return getRoutes(prop.views);
-    }
-    if (prop.layout === '/rtl' || prop.layout === '/admin') {
-      return (
-        <Route
-          path={prop.layout + prop.path}
-          component={prop.component}
-          key={key}
-        />
-      );
-    }
-    return null;
-  });
+  const getRoutes = (routes) =>
+    routes.map((prop, key) => {
+      if (prop.collapse) {
+        return getRoutes(prop.views);
+      }
+      if (prop.category === 'account') {
+        return getRoutes(prop.views);
+      }
+      if (prop.layout === '/rtl' || prop.layout === '/admin') {
+        return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
+      }
+      return null;
+    });
   const { isOpen, onOpen, onClose } = useDisclosure();
   document.documentElement.dir = 'rtl';
   // Chakra Color Mode
@@ -98,9 +89,8 @@ export default function Dashboard(props) {
           variant="rtl"
           w={{
             base: '100%',
-            xl: 'calc(100% - 275px)',
-          }}
-        >
+            xl: 'calc(100% - 275px)'
+          }}>
           <Portal>
             <AdminNavbar
               onOpen={onOpen}
@@ -123,11 +113,7 @@ export default function Dashboard(props) {
           ) : null}
           <Footer />
           <Portal>
-            <FixedPlugin
-              secondary={getActiveNavbar(routes)}
-              fixed={fixed}
-              onOpen={onOpen}
-            />
+            <FixedPlugin secondary={getActiveNavbar(routes)} fixed={fixed} onOpen={onOpen} />
           </Portal>
           <Configurator
             secondary={getActiveNavbar(routes)}

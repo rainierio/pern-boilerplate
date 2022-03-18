@@ -4,8 +4,8 @@ export const buttonStyles = {
       variants: {
         'no-hover': {
           _hover: {
-            boxShadow: 'none',
-          },
+            boxShadow: 'none'
+          }
         },
         'transparent-with-icon': {
           bg: 'transparent',
@@ -16,22 +16,22 @@ export const buttonStyles = {
           _active: {
             bg: 'transparent',
             transform: 'none',
-            borderColor: 'transparent',
+            borderColor: 'transparent'
           },
           _focus: {
-            boxShadow: 'none',
+            boxShadow: 'none'
           },
           _hover: {
-            boxShadow: 'none',
-          },
-        },
+            boxShadow: 'none'
+          }
+        }
       },
       baseStyle: {
         borderRadius: '15px',
         _focus: {
-          boxShadow: 'none',
-        },
-      },
-    },
-  },
+          boxShadow: 'none'
+        }
+      }
+    }
+  }
 };

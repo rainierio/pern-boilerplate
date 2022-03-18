@@ -4,9 +4,9 @@ export const buttonStyles = {
       // 3. We can add a new visual variant
       variants: {
         'with-shadow': {
-          boxShadow: '0 0 2px 2px #efdfde',
-        },
-      },
-    },
-  },
+          boxShadow: '0 0 2px 2px #efdfde'
+        }
+      }
+    }
+  }
 };

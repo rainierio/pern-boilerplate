@@ -5,12 +5,12 @@ export const linkStyles = {
       decoration: 'none',
       baseStyle: {
         _hover: {
-          textDecoration: 'none',
+          textDecoration: 'none'
         },
         _focus: {
-          boxShadow: 'none',
-        },
-      },
-    },
-  },
+          boxShadow: 'none'
+        }
+      }
+    }
+  }
 };

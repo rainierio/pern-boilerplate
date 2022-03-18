@@ -5,12 +5,7 @@ export default function IconBox(props) {
   const { children, ...rest } = props;
 
   return (
-    <Flex
-      alignItems="center"
-      justifyContent="center"
-      borderRadius="12px"
-      {...rest}
-    >
+    <Flex alignItems="center" justifyContent="center" borderRadius="12px" {...rest}>
       {children}
     </Flex>
   );

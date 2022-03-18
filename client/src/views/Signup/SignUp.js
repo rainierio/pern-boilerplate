@@ -12,7 +12,7 @@ import {
   Image,
   Input,
   Text,
-  useColorModeValue,
+  useColorModeValue
 } from '@chakra-ui/react';
 // Assets
 import googleLogin from 'assets/svg/auth/icons8-google.svg';
@@ -42,7 +42,13 @@ function SignUp() {
         mx={{ md: 'auto' }}
         mt={{ md: '14px' }}
       />
-      <Flex direction="column" textAlign="center" justifyContent="center" align="center" mt="6.5rem" mb="30px">
+      <Flex
+        direction="column"
+        textAlign="center"
+        justifyContent="center"
+        align="center"
+        mt="6.5rem"
+        mb="30px">
         <Text fontSize="4xl" color="white" fontWeight="bold">
           Welcome!
         </Text>
@@ -56,9 +62,8 @@ function SignUp() {
             base: '90%',
             sm: '60%',
             lg: '40%',
-            xl: '30%',
-          }}
-        >
+            xl: '30%'
+          }}>
           Use these awesome form to create new account for free.
         </Text>
       </Flex>
@@ -71,8 +76,7 @@ function SignUp() {
           p="40px"
           mx={{ base: '100px' }}
           bg={bgColor}
-          boxShadow="0 20px 27px 0 rgb(0 0 0 / 10%)"
-        >
+          boxShadow="0 20px 27px 0 rgb(0 0 0 / 10%)">
           <Text fontSize="xl" color={textColor} fontWeight="bold" textAlign="center" mb="22px">
             Register With
           </Text>
@@ -86,8 +90,7 @@ function SignUp() {
               border="1px solid lightgray"
               cursor="pointer"
               transition="all .25s ease"
-              _hover={{ filter: 'shaddow(xl)', bg: bgIcons }}
-            >
+              _hover={{ filter: 'shaddow(xl)', bg: bgIcons }}>
               <Link to="test">
                 <Image boxSize="40px" src={googleLogin} alt="Google" />
               </Link>
@@ -101,8 +104,7 @@ function SignUp() {
               border="1px solid lightgray"
               cursor="pointer"
               transition="all .25s ease"
-              _hover={{ filter: 'brightness(100%)', bg: bgIcons }}
-            >
+              _hover={{ filter: 'brightness(100%)', bg: bgIcons }}>
               <Link to="test">
                 <Image boxSize="40px" src={facebookLogin} alt="Google" />
               </Link>
@@ -116,8 +118,7 @@ function SignUp() {
               border="1px solid lightgray"
               cursor="pointer"
               transition="all .25s ease"
-              _hover={{ filter: 'brightness(120%)', bg: bgIcons }}
-            >
+              _hover={{ filter: 'brightness(120%)', bg: bgIcons }}>
               <Link to="test">
                 <Image boxSize="40px" src={linkedInLogin} alt="Google" />
               </Link>
@@ -130,7 +131,15 @@ function SignUp() {
             <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
               Name
             </FormLabel>
-            <Input fontSize="sm" ms="4px" borderRadius="15px" type="text" placeholder="Your full name" mb="24px" size="lg" />
+            <Input
+              fontSize="sm"
+              ms="4px"
+              borderRadius="15px"
+              type="text"
+              placeholder="Your full name"
+              mb="24px"
+              size="lg"
+            />
             <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
               Email
             </FormLabel>
@@ -177,16 +186,20 @@ function SignUp() {
               h="45"
               mb="24px"
               _hover={{
-                bg: 'blue.200',
+                bg: 'blue.200'
               }}
               _active={{
-                bg: 'blue.400',
-              }}
-            >
+                bg: 'blue.400'
+              }}>
               SIGN UP
             </Button>
           </FormControl>
-          <Flex flexDirection="column" justifyContent="center" alignItems="center" maxW="100%" mt="0px">
+          <Flex
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+            maxW="100%"
+            mt="0px">
             <Text color={textColor} fontWeight="medium">
               Already have an account?
               <Text color={titleColor} as="span" ms="5px" fontWeight="bold">

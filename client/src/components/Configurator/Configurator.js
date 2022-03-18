@@ -13,7 +13,7 @@ import {
   Switch,
   Text,
   useColorMode,
-  useColorModeValue,
+  useColorModeValue
 } from '@chakra-ui/react';
 import GitHubButton from 'react-github-btn';
 import { Separator } from 'components/Separator/Separator';
@@ -22,9 +22,7 @@ import React, { useState } from 'react';
 import { FaTwitter, FaFacebook } from 'react-icons/fa';
 
 export default function Configurator(props) {
-  const {
-    secondary, isOpen, onClose, fixed, ...rest
-  } = props;
+  const { secondary, isOpen, onClose, fixed, ...rest } = props;
   const [switched, setSwitched] = useState(props.isChecked);
 
   const { colorMode, toggleColorMode } = useColorMode();
@@ -36,7 +34,7 @@ export default function Configurator(props) {
 
   const bgButton = useColorModeValue(
     'linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%)',
-    'white',
+    'white'
   );
   const colorButton = useColorModeValue('white', 'gray.700');
   const secondaryButtonBg = useColorModeValue('white', 'transparent');
@@ -49,8 +47,7 @@ export default function Configurator(props) {
       onClose={props.onClose}
       placement={document.documentElement.dir === 'rtl' ? 'left' : 'right'}
       finalFocusRef={settingsRef}
-      blockScrollOnMount={false}
-    >
+      blockScrollOnMount={false}>
       <DrawerContent>
         <DrawerHeader pt="24px" px="24px">
           <DrawerCloseButton />
@@ -81,8 +78,7 @@ export default function Configurator(props) {
                   color="teal.300"
                   variant="outline"
                   fontSize="xs"
-                  onClick={props.onTransparent}
-                >
+                  onClick={props.onTransparent}>
                   Transparent
                 </Button>
                 <Button
@@ -94,17 +90,12 @@ export default function Configurator(props) {
                   _hover="teal.300"
                   color="white"
                   fontSize="xs"
-                  onClick={props.onOpaque}
-                >
+                  onClick={props.onOpaque}>
                   Opaque
                 </Button>
               </Flex>
             </Box>
-            <Box
-              display={fixedDisplay}
-              justifyContent="space-between "
-              mb="16px"
-            >
+            <Box display={fixedDisplay} justifyContent="space-between " mb="16px">
               <Text fontSize="md" fontWeight="600" mb="4px">
                 Navbar Fixed
               </Text>
@@ -122,18 +113,12 @@ export default function Configurator(props) {
                 }}
               />
             </Box>
-            <Flex
-              justifyContent="space-between"
-              alignItems="center"
-              mb="24px"
-            >
+            <Flex justifyContent="space-between" alignItems="center" mb="24px">
               <Text fontSize="md" fontWeight="600" mb="4px">
                 Dark/Light
               </Text>
               <Button onClick={toggleColorMode}>
-                Toggle
-                {' '}
-                {colorMode === 'light' ? 'Dark' : 'Light'}
+                Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
               </Button>
             </Flex>
 
@@ -149,8 +134,7 @@ export default function Configurator(props) {
                 <Link
                   href="https://www.creative-tim.com/product/purity-ui-dashboard"
                   w="100%"
-                  mb="16px"
-                >
+                  mb="16px">
                   <Button
                     w="100%"
                     mb="16px"
@@ -158,15 +142,11 @@ export default function Configurator(props) {
                     color={colorButton}
                     fontSize="xs"
                     variant="no-hover"
-                    px="30px"
-                  >
+                    px="30px">
                     Free Download
                   </Button>
                 </Link>
-                <Link
-                  href="https://demos.creative-tim.com/docs-purity-ui-dashboard/"
-                  w="100%"
-                >
+                <Link href="https://demos.creative-tim.com/docs-purity-ui-dashboard/" w="100%">
                   <Button
                     w="100%"
                     bg={secondaryButtonBg}
@@ -176,24 +156,17 @@ export default function Configurator(props) {
                     fontSize="xs"
                     variant="no-hover"
                     px="20px"
-                    mb="16px"
-                  >
+                    mb="16px">
                     <Text textDecorationColor="none">Documentation</Text>
                   </Button>
                 </Link>
               </Box>
-              <Flex
-                justifyContent="center"
-                alignItems="center"
-                w="100%"
-                mb="16px"
-              >
+              <Flex justifyContent="center" alignItems="center" w="100%" mb="16px">
                 <GitHubButton
                   href="https://github.com/creativetimofficial/purity-ui-dashboard"
                   data-icon="octicon-star"
                   data-show-count="true"
-                  aria-label="Star creativetimofficial/purity-ui-dashboard on GitHub"
-                >
+                  aria-label="Star creativetimofficial/purity-ui-dashboard on GitHub">
                   Star
                 </GitHubButton>
               </Flex>
@@ -204,20 +177,14 @@ export default function Configurator(props) {
                 <Flex justifyContent="center" alignContent="center">
                   <Link
                     isExternal="true"
-                    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fpurity-ui-dashboard&text=Check%20Purity%20UI%20Dashboard%20made%20by%20%40CreativeTim%20and%20%40simmmple_web%20%23webdesign%20%23dashboard%20%23chakra"
-                  >
-                    <Button
-                      colorScheme="twitter"
-                      leftIcon={<FaTwitter />}
-                      me="10px"
-                    >
+                    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fpurity-ui-dashboard&text=Check%20Purity%20UI%20Dashboard%20made%20by%20%40CreativeTim%20and%20%40simmmple_web%20%23webdesign%20%23dashboard%20%23chakra">
+                    <Button colorScheme="twitter" leftIcon={<FaTwitter />} me="10px">
                       <Text>Tweet</Text>
                     </Button>
                   </Link>
                   <Link
                     isExternal="true"
-                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fpurity-ui-dashboard"
-                  >
+                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fpurity-ui-dashboard">
                     <Button colorScheme="facebook" leftIcon={<FaFacebook />}>
                       <Text>Share</Text>
                     </Button>
@@ -235,5 +202,5 @@ Configurator.propTypes = {
   secondary: PropTypes.bool,
   isOpen: PropTypes.bool,
   onClose: PropTypes.func,
-  fixed: PropTypes.bool,
+  fixed: PropTypes.bool
 };

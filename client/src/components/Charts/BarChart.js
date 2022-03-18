@@ -8,14 +8,14 @@ class BarChart extends Component {
     super(props);
     this.state = {
       chartData: [],
-      chartOptions: {},
+      chartOptions: {}
     };
   }
 
   componentDidMount() {
     this.setState({
       chartData: barChartData,
-      chartOptions: barChartOptions,
+      chartOptions: barChartOptions
     });
   }
 
@@ -26,8 +26,7 @@ class BarChart extends Component {
         height={{ sm: '200px' }}
         width="100%"
         bg="linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%)"
-        position="relative"
-      >
+        position="relative">
         <Chart
           options={this.state.chartOptions}
           series={this.state.chartData}

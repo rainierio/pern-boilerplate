@@ -4,7 +4,7 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  useColorModeValue,
+  useColorModeValue
 } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 
@@ -21,14 +21,13 @@ export function SearchBar(props) {
       borderRadius="15px"
       w="200px"
       _focus={{
-        borderColor: { mainTeal },
+        borderColor: { mainTeal }
       }}
       _active={{
-        borderColor: { mainTeal },
-      }}
-    >
+        borderColor: { mainTeal }
+      }}>
       <InputLeftElement
-        children={(
+        children={
           <IconButton
             bg="inherit"
             borderRadius="inherit"
@@ -36,21 +35,16 @@ export function SearchBar(props) {
             _active={{
               bg: 'inherit',
               transform: 'none',
-              borderColor: 'transparent',
+              borderColor: 'transparent'
             }}
             _focus={{
-              boxShadow: 'none',
+              boxShadow: 'none'
             }}
             icon={<SearchIcon color={searchIconColor} w="15px" h="15px" />}
           />
-        )}
+        }
       />
-      <Input
-        fontSize="xs"
-        py="11px"
-        placeholder="Type here..."
-        borderRadius="inherit"
-      />
+      <Input fontSize="xs" py="11px" placeholder="Type here..." borderRadius="inherit" />
     </InputGroup>
   );
 }

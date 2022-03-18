@@ -15,10 +15,10 @@ import {
   Image,
   Switch,
   Text,
-  useColorModeValue,
+  useColorModeValue
 } from '@chakra-ui/react';
 // Assets
-import signInImage from 'assets/img/signInImage.png';
+
 import googleLogin from 'assets/svg/auth/icons8-google.svg';
 import facebookLogin from 'assets/svg/auth/icons8-facebook-circled.svg';
 import linkedInLogin from 'assets/svg/auth/icons8-linkedin-circled.svg';
@@ -36,15 +36,18 @@ function SignIn() {
         mx="auto"
         justifyContent="space-between"
         mb="30px"
-        pt={{ sm: '100px', md: '0px' }}
-      >
+        pt={{ sm: '100px', md: '0px' }}>
         <Flex
           alignItems="center"
           justifyContent="start"
           style={{ userSelect: 'none' }}
-          w={{ base: '100%', md: '50%', lg: '42%' }}
-        >
-          <Flex direction="column" w="100%" background="transparent" p="48px" mt={{ md: '150px', lg: '80px' }}>
+          w={{ base: '100%', md: '50%', lg: '42%' }}>
+          <Flex
+            direction="column"
+            w="100%"
+            background="transparent"
+            p="48px"
+            mt={{ md: '150px', lg: '80px' }}>
             <Heading color={titleColor} fontSize="32px" mb="10px">
               Login
             </Heading>
@@ -62,11 +65,25 @@ function SignIn() {
               <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
                 Email
               </FormLabel>
-              <Input borderRadius="15px" mb="24px" fontSize="sm" type="text" placeholder="Your email adress" size="lg" />
+              <Input
+                borderRadius="15px"
+                mb="24px"
+                fontSize="sm"
+                type="text"
+                placeholder="Your email adress"
+                size="lg"
+              />
               <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
                 Password
               </FormLabel>
-              <Input borderRadius="15px" mb="36px" fontSize="sm" type="password" placeholder="Your password" size="lg" />
+              <Input
+                borderRadius="15px"
+                mb="36px"
+                fontSize="sm"
+                type="password"
+                placeholder="Your password"
+                size="lg"
+              />
               <FormControl display="flex" alignItems="center">
                 <Switch id="remember-login" colorScheme="blue" me="10px" />
                 <FormLabel htmlFor="remember-login" mb="0" ms="1" fontWeight="normal">
@@ -83,16 +100,20 @@ function SignIn() {
                 color="white"
                 mt="20px"
                 _hover={{
-                  bg: 'blue.200',
+                  bg: 'blue.200'
                 }}
                 _active={{
-                  bg: 'blue.400',
-                }}
-              >
+                  bg: 'blue.400'
+                }}>
                 SIGN IN
               </Button>
             </FormControl>
-            <Flex flexDirection="column" justifyContent="center" alignItems="center" maxW="100%" mt="0px">
+            <Flex
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+              maxW="100%"
+              mt="0px">
               <Text color={textColor} fontWeight="medium">
                 Don't have an account?
                 <Text color={titleColor} as="span" ms="5px" fontWeight="bold">
@@ -102,9 +123,15 @@ function SignIn() {
             </Flex>
           </Flex>
         </Flex>
-        <Box display={{ base: 'none', md: 'block' }} overflowX="hidden" h="100%" w="40vw" position="absolute" right="0px">
+        <Box
+          display={{ base: 'none', md: 'block' }}
+          overflowX="hidden"
+          h="100%"
+          w="40vw"
+          position="absolute"
+          right="0px">
           <Box
-            bgImage={signInImage}
+            bgGradient="linear(to-r, blue.400, teal.200)"
             w="100%"
             h="100%"
             bgSize="cover"
