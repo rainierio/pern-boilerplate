@@ -40,7 +40,7 @@ function App() {
           >
             Redux Toolkit
           </a>
-          ,<span> and </span>
+          <span> and </span>
           <a
             className="App-link"
             href="https://react-redux.js.org/"
